@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid bg-dark text-white min-vh-100 d-flex flex-column" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+      <div class="container-fluid d-flex flex-column flex-grow-1">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary px-3 py-2">
+          <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_535)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-white fs-5 fw-bold mb-0">Indicoin</h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center gap-3">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="homepage.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="homepage.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn btn-primary rounded-lg px-3 py-2 text-white fw-bold"
+                  onclick="window.location.href='connect wallet.html'"
+                >
+                  Connect Wallet
+                </button>
+              </li>
+              <li class="nav-item">
+                <div
+                  class="bg-secondary rounded-circle" style="width: 40px; height: 40px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIWGiydvdb4evY33jeQ7teeHdt9tzzl0ryJconE3dFlHtw25eID5ImetMEhcpEsBIVPDmfqTwgAAYcOvin_Uomuzal5L4zEJ1dUTlQQjcxF4kvx8SITSAT48I2K2Qz7etUElkvjhDmnGpxTJCCBM4yGerBV6vpElSCOCt9v1n-1Wz3n-cysap2kb3GAeo3cJygL3KxUUdY_U4jY-R0svTRaXZO3F5E5FJT0Xipz9xMnj1V4FHkOzG5Asnecyq8ivn7l6pggTMHh_CJ'); background-size: cover; background-position: center;"
+                ></div>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Dashboard</p></div>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4" id="walletAddress">Wallet Address: Not Connected</p>
+            <div class="flex flex-wrap gap-4 p-4">
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#223749]">
+                <p class="text-white text-base font-medium leading-normal">INDC Balance</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight" id="indcBalance">0</p>
+              </div>
+            </div>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#2496f3] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                  id="sendIndcButton"
+                >
+                  <span class="truncate">Send INDC</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#223749] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                  id="redeemIndcButton"
+                >
+                  <span class="truncate">Redeem INDC</span>
+                </button>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Transaction History</h2>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-lg border border-[#314f68] bg-[#101a23]">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-[#182834]">
+                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Date</th>
+                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Type</th>
+                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Amount</th>
+                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">
+                        Transaction ID
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#314f68]">
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        2024-07-26
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">Deposit</td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        +5,000 INDC
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xabc123</td>
+                    </tr>
+                    <tr class="border-t border-t-[#314f68]">
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        2024-07-25
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">Mint</td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        +2,500 INDC
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xdef456</td>
+                    </tr>
+                    <tr class="border-t border-t-[#314f68]">
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        2024-07-24
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        Redemption
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        -1,000 INDC
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xghi789</td>
+                    </tr>
+                    <tr class="border-t border-t-[#314f68]">
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        2024-07-23
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        Withdrawal
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        -2,000 INDC
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xjkl012</td>
+                    </tr>
+                    <tr class="border-t border-t-[#314f68]">
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        2024-07-22
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">Deposit</td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
+                        +3,000 INDC
+                      </td>
+                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xmnp345</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120{display: none;}}
+                @container(max-width:240px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240{display: none;}}
+                @container(max-width:360px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360{display: none;}}
+                @container(max-width:480px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
