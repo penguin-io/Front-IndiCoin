@@ -1,147 +1,799 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IndiCoin - The Indian Rupee on the Blockchain</title>
+        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-    <title>Stitch Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container-fluid bg-dark text-white min-vh-100 d-flex flex-column" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="container-fluid d-flex flex-column flex-grow-1">
-        <header class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary px-3 py-2">
-          <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_6_535)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
-                </defs>
-              </svg>
-            </div>
-            <h2 class="text-white fs-5 fw-bold mb-0">Indicoin</h2>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-center gap-3">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="homepage.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="homepage.html">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="homepage.html">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="homepage.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <button
-                  class="btn btn-primary rounded-lg px-3 py-2 text-white fw-bold"
-                  onclick="window.location.href='connect wallet.html'"
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+        />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a
+                    class="navbar-brand d-flex align-items-center"
+                    href="homepage.html"
                 >
-                  Connect Wallet
-                </button>
-              </li>
-            </ul>
-          </div>
-        </header>
-        <div class="container d-flex flex-grow-1 justify-content-center py-5">
-          <div class="d-flex flex-column w-100" style="max-width: 960px;">
-            <div class="p-4">
-              <div
-                class="d-flex flex-column gap-3 bg-cover bg-center bg-no-repeat rounded-lg p-4 text-center"
-                style='min-height: 480px; background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuABjJhtr76RKaY6hxSybH4kHetUG2Ee_MMLtzwP2B-dNx1ycH5qNLA5G1xgqkvyGfPbcRcaTInyaD2uCNEnQ_SAesKqkvSLebp-W_oN1fvKYaAFHXjJtj6GCsMNLxzM-mnLppAmTN0-F-EytzYxWP7S6IMhW9MlHc-nkWD_te138lEDyqNXed_WqjS3R0CK6_ET6rTha3klsI1Trjh0MPRurkx9bkFLwZJON86iJWg_-emU7nwLzYSAjOryY8gFQTkQXLt5LWwg0XZG");'
-              >
-                <h1 class="text-white display-4 fw-black lh-sm mb-2">
-                  The Indian Rupee on the Blockchain
-                </h1>
-                <h2 class="text-white fs-6 fw-normal lh-base mb-4">
-                  Indicoin brings the stability of the Indian Rupee to the decentralized world, enabling borderless transactions and participation in the decentralized finance
-                  ecosystem.
-                </h2>
+                    <div class="me-2">
+                        <svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_6_535)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                    fill="currentColor"
+                                ></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_535">
+                                    <rect
+                                        width="48"
+                                        height="48"
+                                        fill="white"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="fw-bold fs-4 text-gradient">IndiCoin</span>
+                </a>
+
                 <button
-                  class="btn btn-primary rounded-lg px-4 py-2 text-white fw-bold mx-auto"
-                  onclick="window.location.href='connect wallet.html'"
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                 >
-                  Get Started
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-              </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <button class="btn btn-primary" data-connect-wallet>
+                                <i class="bi bi-wallet2 me-2"></i>Connect Wallet
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <h2 class="text-white fs-4 fw-bold lh-sm px-4 pb-3 pt-5">Our Mission</h2>
-            <p class="text-white fs-6 fw-normal lh-base pb-3 pt-1 px-4 text-center">
-              To bridge the gap between traditional finance and the decentralized world by providing a stable, reliable, and accessible digital representation of the Indian Rupee
-              on the blockchain.
-            </p>
-            <h2 class="text-white fs-4 fw-bold lh-sm px-4 pb-3 pt-5">Team Penguins</h2>
-            <p class="text-white fs-6 fw-normal lh-base pb-3 pt-1 px-4 text-center">
-              Meet the team behind Indicoin, a group of passionate individuals dedicated to innovation and financial inclusion.
-            </p>
-            <div class="row row-cols-1 row-cols-md-3 g-3 p-4">
-              <div class="col">
-                <div class="d-flex flex-column gap-3 text-center pb-3">
-                  <div class="px-4">
-                    <div
-                      class="w-100 bg-center bg-no-repeat aspect-ratio-1x1 bg-cover rounded-circle"
-                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAA4a34u6VG0DoRTH39-8njAJ2zXDucgq7fNt5g5j2VIJ_geriRiHLN8vF6UYAy-9ZsVhd1wC7UMNU0Z-guTgeS9Tb2gAJrzibfopsWOMdJ991UZ7pNTwZjJ4x4RAscd4H9kvKDssXOex03Pj3aCdLor73X3jyVZ1Tgy-FNutlkiUj8IqJHQYjWUGOMOQ2sgE226dWguZ1u02ZZ7oTUFKmBSPkYImWZguAQeWIzV5VlbpV42IvD3Jt4EMBL1-Y6wN0ycyTAXFKardqJ");'
-                    ></div>
-                  </div>
-                  <div>
-                    <p class="text-white fs-6 fw-medium lh-base">Arjun Patel</p>
-                    <p class="text-secondary fs-6 fw-normal lh-base">CEO</p>
-                  </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="fade-in">
+                            <h1 class="display-3 fw-bold mb-4">
+                                The
+                                <span class="text-gradient">Indian Rupee</span>
+                                on the
+                                <span class="text-gradient">Blockchain</span>
+                            </h1>
+                            <p class="lead mb-4 text-secondary">
+                                IndiCoin brings the stability of the Indian
+                                Rupee to the decentralized world, enabling
+                                borderless transactions and participation in the
+                                decentralized finance ecosystem.
+                            </p>
+                            <div class="d-flex flex-column flex-sm-row gap-3">
+                                <button
+                                    class="btn btn-primary btn-lg px-4 py-3"
+                                    data-connect-wallet
+                                >
+                                    <i class="bi bi-rocket-takeoff me-2"></i>Get
+                                    Started
+                                </button>
+                                <button
+                                    class="btn btn-secondary btn-lg px-4 py-3"
+                                    onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"
+                                >
+                                    <i class="bi bi-info-circle me-2"></i>Learn
+                                    More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center fade-in animate-delay-300">
+                            <div class="floating">
+                                <div class="position-relative d-inline-block">
+                                    <div
+                                        class="bg-primary bg-opacity-10 rounded-circle p-5"
+                                        style="width: 300px; height: 300px"
+                                    >
+                                        <div
+                                            class="bg-primary bg-opacity-20 rounded-circle p-4 h-100 d-flex align-items-center justify-content-center"
+                                        >
+                                            <div
+                                                class="bg-primary rounded-circle p-4 d-flex align-items-center justify-content-center"
+                                                style="
+                                                    width: 120px;
+                                                    height: 120px;
+                                                "
+                                            >
+                                                <i
+                                                    class="bi bi-currency-rupee text-white"
+                                                    style="font-size: 3rem"
+                                                ></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="position-absolute"
+                                        style="top: -10px; right: -10px"
+                                    >
+                                        <div
+                                            class="bg-success rounded-circle p-3 pulse"
+                                        >
+                                            <i
+                                                class="bi bi-check-circle text-white fs-5"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="d-flex flex-column gap-3 text-center pb-3">
-                  <div class="px-4">
-                    <div
-                      class="w-100 bg-center bg-no-repeat aspect-ratio-1x1 bg-cover rounded-circle"
-                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdCXvA_hjsJF4ujm9o7ElSnn9s1QrfhhRVOZ7IJruSdPDD724Q5kgoGFYB1NURowMdgMvUzYO3GdgltTnN1bKgzADSWMrhGqoDjXBqpJzNXFYtAqM8oP897RMnqTJkr26HTNWxMHcy0jBoYjcbpmCaJmS0a0ImW2QpEkxpLqeN_b9WgHB-ZdB_yzIzEevcMSbbAP0YsexHNZI-Pp4JVNiHk-Y-kHl6W9ICtrK5nDAN6tcUaEuBDLAXpHkzeS_X2rIkYsDVTcQ4zp6M");'
-                    ></div>
-                  </div>
-                  <div>
-                    <p class="text-white fs-6 fw-medium lh-base">Priya Sharma</p>
-                    <p class="text-secondary fs-6 fw-normal lh-base">CTO</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex flex-column gap-3 text-center pb-3">
-                  <div class="px-4">
-                    <div
-                      class="w-100 bg-center bg-no-repeat aspect-ratio-1x1 bg-cover rounded-circle"
-                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuCfdbFlrUwUG_V7OcOLKwLCVeAEZ9NMx5FEDCzCzCaUgx9mRTRy2cN3q402zWj4bsaANXYgymlqh7ndCYAZ0wTw1Nd85vU8P4b74My2sTmXk05KVH1omEmLACMgnsH87O7QLoDLSnl2iVouPZtr4OchzaDXlt92UUNylOCnhtnAZE6-rQyv1eqQWCrRWKXw7cugNlMWUwfN5htCI-9SFvuUe6EcIbPcBSa0diqhKxiU4WajaFYdmdJ9x-a2BYzGLpHhMrLjni1NCJGY");'
-                    ></div>
-                  </div>
-                  <div>
-                    <p class="text-white fs-6 fw-medium lh-base">Vikram Singh</p>
-                    <p class="text-secondary fs-6 fw-normal lh-base">Head of Operations</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Why Choose IndiCoin?</h2>
+                    <p class="lead text-secondary">
+                        Experience the power of blockchain technology with the
+                        stability you trust
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center hover-lift">
+                            <div class="card-body p-4">
+                                <div
+                                    class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                    style="width: 80px; height: 80px"
+                                >
+                                    <i
+                                        class="bi bi-shield-check text-primary fs-1"
+                                    ></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Secure & Stable</h4>
+                                <p class="text-secondary">
+                                    Backed by the stability of the Indian Rupee
+                                    with enterprise-grade security protocols.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center hover-lift">
+                            <div class="card-body p-4">
+                                <div
+                                    class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                    style="width: 80px; height: 80px"
+                                >
+                                    <i
+                                        class="bi bi-lightning-charge text-success fs-1"
+                                    ></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Instant Transfers</h4>
+                                <p class="text-secondary">
+                                    Send and receive funds instantly across the
+                                    globe with minimal transaction fees.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center hover-lift">
+                            <div class="card-body p-4">
+                                <div
+                                    class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                    style="width: 80px; height: 80px"
+                                >
+                                    <i
+                                        class="bi bi-graph-up text-warning fs-1"
+                                    ></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">DeFi Ready</h4>
+                                <p class="text-secondary">
+                                    Seamlessly integrate with DeFi protocols and
+                                    earn yields on your holdings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-5 bg-dark bg-opacity-50">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <div class="stats-value">₹1B+</div>
+                            <div class="stats-label">Total Value Locked</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <div class="stats-value">50K+</div>
+                            <div class="stats-label">Active Users</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <div class="stats-value">1M+</div>
+                            <div class="stats-label">Transactions</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <div class="stats-value">99.9%</div>
+                            <div class="stats-label">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h2 class="display-5 fw-bold mb-4">Our Mission</h2>
+                        <p class="lead mb-4">
+                            To bridge the gap between traditional finance and
+                            the decentralized world by providing a stable,
+                            reliable, and accessible digital representation of
+                            the Indian Rupee on the blockchain.
+                        </p>
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="bg-primary rounded-circle p-2 me-3"
+                                    >
+                                        <i class="bi bi-check text-white"></i>
+                                    </div>
+                                    <span class="fw-medium"
+                                        >1:1 INR Backed</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="bg-primary rounded-circle p-2 me-3"
+                                    >
+                                        <i class="bi bi-check text-white"></i>
+                                    </div>
+                                    <span class="fw-medium">Fully Audited</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="bg-primary rounded-circle p-2 me-3"
+                                    >
+                                        <i class="bi bi-check text-white"></i>
+                                    </div>
+                                    <span class="fw-medium"
+                                        >Regulatory Compliant</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="bg-primary rounded-circle p-2 me-3"
+                                    >
+                                        <i class="bi bi-check text-white"></i>
+                                    </div>
+                                    <span class="fw-medium">24/7 Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="glass-effect rounded-lg p-5 text-center">
+                            <h3 class="fw-bold mb-4">How It Works</h3>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div
+                                        class="d-flex align-items-center p-3 bg-primary bg-opacity-10 rounded"
+                                    >
+                                        <div
+                                            class="bg-primary rounded-circle p-2 me-3 flex-shrink-0"
+                                        >
+                                            <span class="text-white fw-bold"
+                                                >1</span
+                                            >
+                                        </div>
+                                        <span
+                                            >Deposit INR through secure payment
+                                            gateway</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div
+                                        class="d-flex align-items-center p-3 bg-success bg-opacity-10 rounded"
+                                    >
+                                        <div
+                                            class="bg-success rounded-circle p-2 me-3 flex-shrink-0"
+                                        >
+                                            <span class="text-white fw-bold"
+                                                >2</span
+                                            >
+                                        </div>
+                                        <span
+                                            >Receive equivalent INDC tokens
+                                            instantly</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div
+                                        class="d-flex align-items-center p-3 bg-warning bg-opacity-10 rounded"
+                                    >
+                                        <div
+                                            class="bg-warning rounded-circle p-2 me-3 flex-shrink-0"
+                                        >
+                                            <span class="text-white fw-bold"
+                                                >3</span
+                                            >
+                                        </div>
+                                        <span
+                                            >Use INDC for transfers, DeFi, or
+                                            redeem back to INR</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-5 bg-dark bg-opacity-25">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Meet Team Penguins</h2>
+                    <p class="lead text-secondary">
+                        The passionate individuals behind IndiCoin's innovation
+                    </p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member">
+                            <div
+                                class="team-avatar mx-auto mb-3"
+                                style="
+                                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAA4a34u6VG0DoRTH39-8njAJ2zXDucgq7fNt5g5j2VIJ_geriRiHLN8vF6UYAy-9ZsVhd1wC7UMNU0Z-guTgeS9Tb2gAJrzibfopsWOMdJ991UZ7pNTwZjJ4x4RAscd4H9kvKDssXOex03Pj3aCdLor73X3jyVZ1Tgy-FNutlkiUj8IqJHQYjWUGOMOQ2sgE226dWguZ1u02ZZ7oTUFKmBSPkYImWZguAQeWIzV5VlbpV42IvD3Jt4EMBL1-Y6wN0ycyTAXFKardqJ&quot;);
+                                    background-size: cover;
+                                    background-position: center;
+                                "
+                            ></div>
+                            <h5 class="fw-bold mb-2">Arjun Patel</h5>
+                            <p class="text-primary fw-medium mb-3">
+                                Chief Executive Officer
+                            </p>
+                            <p class="text-secondary small">
+                                Leading IndiCoin's vision to revolutionize
+                                digital payments in India
+                            </p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a
+                                    href="#"
+                                    class="btn btn-sm btn-outline-primary rounded-circle"
+                                >
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-sm btn-outline-primary rounded-circle"
+                                >
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member">
+                            <div
+                                class="team-avatar mx-auto mb-3"
+                                style="
+                                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBdCXvA_hjsJF4ujm9o7ElSnn9s1QrfhhRVOZ7IJruSdPDD724Q5kgoGFYB1NURowMdgMvUzYO3GdgltTnN1bKgzADSWMrhGqoDjXBqpJzNXFYtAqM8oP897RMnqTJkr26HTNWxMHcy0jBoYjcbpmCaJmS0a0ImW2QpEkxpLqeN_b9WgHB-ZdB_yzIzEevcMSbbAP0YsexHNZI-Pp4JVNiHk-Y-kHl6W9ICtrK5nDAN6tcUaEuBDLAXpHkzeS_X2rIkYsDVTcQ4zp6M&quot;);
+                                    background-size: cover;
+                                    background-position: center;
+                                "
+                            ></div>
+                            <h5 class="fw-bold mb-2">Priya Sharma</h5>
+                            <p class="text-success fw-medium mb-3">
+                                Chief Technology Officer
+                            </p>
+                            <p class="text-secondary small">
+                                Architecting secure and scalable blockchain
+                                infrastructure
+                            </p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a
+                                    href="#"
+                                    class="btn btn-sm btn-outline-success rounded-circle"
+                                >
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-sm btn-outline-success rounded-circle"
+                                >
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member">
+                            <div
+                                class="team-avatar mx-auto mb-3"
+                                style="
+                                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBuCfdbFlrUwUG_V7OcOLKwLCVeAEZ9NMx5FEDCzCzCaUgx9mRTRy2cN3q402zWj4bsaANXYgymlqh7ndCYAZ0wTw1Nd85vU8P4b74My2sTmXk05KVH1omEmLACMgnsH87O7QLoDLSnl2iVouPZtr4OchzaDXlt92UUNylOCnhtnAZE6-rQyv1eqQWCrRWKXw7cugNlMWUwfN5htCI-9SFvuUe6EcIbPcBSa0diqhKxiU4WajaFYdmdJ9x-a2BYzGLpHhMrLjni1NCJGY&quot;);
+                                    background-size: cover;
+                                    background-position: center;
+                                "
+                            ></div>
+                            <h5 class="fw-bold mb-2">Vikram Singh</h5>
+                            <p class="text-warning fw-medium mb-3">
+                                Head of Operations
+                            </p>
+                            <p class="text-secondary small">
+                                Ensuring seamless operations and regulatory
+                                compliance
+                            </p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a
+                                    href="#"
+                                    class="btn btn-sm btn-outline-warning rounded-circle"
+                                >
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-sm btn-outline-warning rounded-circle"
+                                >
+                                    <i class="bi bi-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="glass-effect rounded-lg p-5 text-center">
+                    <h2 class="display-6 fw-bold mb-3">
+                        Ready to Get Started?
+                    </h2>
+                    <p class="lead text-secondary mb-4">
+                        Join thousands of users who trust IndiCoin for their
+                        digital transactions
+                    </p>
+                    <div
+                        class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
+                    >
+                        <button
+                            class="btn btn-primary btn-lg px-5"
+                            data-connect-wallet
+                        >
+                            <i class="bi bi-wallet2 me-2"></i>Connect Wallet
+                        </button>
+                        <button
+                            class="btn btn-outline-secondary btn-lg px-5"
+                            onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"
+                        >
+                            <i class="bi bi-book me-2"></i>Documentation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer py-5 mt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 48 48"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="me-2"
+                            >
+                                <g clip-path="url(#clip0_6_535)">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                        fill="currentColor"
+                                    ></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_6_535">
+                                        <rect
+                                            width="48"
+                                            height="48"
+                                            fill="white"
+                                        ></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="fw-bold fs-4 text-gradient"
+                                >IndiCoin</span
+                            >
+                        </div>
+                        <p class="text-secondary mb-4">
+                            The future of digital payments in India, powered by
+                            blockchain technology.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a
+                                href="#"
+                                class="btn btn-outline-primary rounded-circle"
+                            >
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="btn btn-outline-primary rounded-circle"
+                            >
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="btn btn-outline-primary rounded-circle"
+                            >
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="btn btn-outline-primary rounded-circle"
+                            >
+                                <i class="bi bi-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="fw-bold mb-3">Product</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Features</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Security</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >API</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Pricing</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="fw-bold mb-3">Company</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a
+                                    href="#about"
+                                    class="text-secondary text-decoration-none"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#team"
+                                    class="text-secondary text-decoration-none"
+                                    >Team</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Careers</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Blog</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="fw-bold mb-3">Resources</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Documentation</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Help Center</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Community</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Status</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="fw-bold mb-3">Legal</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Privacy Policy</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Terms of Service</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Cookie Policy</a
+                                >
+                            </li>
+                            <li class="mb-2">
+                                <a
+                                    href="#"
+                                    class="text-secondary text-decoration-none"
+                                    >Compliance</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="my-4 border-secondary" />
+
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-secondary mb-0">
+                            &copy; 2024 IndiCoin. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="text-secondary mb-0">
+                            Made with
+                            <i class="bi bi-heart-fill text-danger"></i> in
+                            India
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/app.js"></script>
+    </body>
 </html>

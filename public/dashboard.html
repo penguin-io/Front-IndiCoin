@@ -1,179 +1,780 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard - IndiCoin</title>
+        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-    <title>Stitch Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container-fluid bg-dark text-white min-vh-100 d-flex flex-column" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="container-fluid d-flex flex-column flex-grow-1">
-        <header class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary px-3 py-2">
-          <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_6_535)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
-                </defs>
-              </svg>
-            </div>
-            <h2 class="text-white fs-5 fw-bold mb-0">Indicoin</h2>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-center gap-3">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="homepage.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="homepage.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="homepage.html">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <button
-                  class="btn btn-primary rounded-lg px-3 py-2 text-white fw-bold"
-                  onclick="window.location.href='connect wallet.html'"
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+        />
+
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a
+                    class="navbar-brand d-flex align-items-center"
+                    href="homepage.html"
                 >
-                  Connect Wallet
-                </button>
-              </li>
-              <li class="nav-item">
-                <div
-                  class="bg-secondary rounded-circle" style="width: 40px; height: 40px; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIWGiydvdb4evY33jeQ7teeHdt9tzzl0ryJconE3dFlHtw25eID5ImetMEhcpEsBIVPDmfqTwgAAYcOvin_Uomuzal5L4zEJ1dUTlQQjcxF4kvx8SITSAT48I2K2Qz7etUElkvjhDmnGpxTJCCBM4yGerBV6vpElSCOCt9v1n-1Wz3n-cysap2kb3GAeo3cJygL3KxUUdY_U4jY-R0svTRaXZO3F5E5FJT0Xipz9xMnj1V4FHkOzG5Asnecyq8ivn7l6pggTMHh_CJ'); background-size: cover; background-position: center;"
-                ></div>
-              </li>
-            </ul>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Dashboard</p></div>
-            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4" id="walletAddress">Wallet Address: Not Connected</p>
-            <div class="flex flex-wrap gap-4 p-4">
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#223749]">
-                <p class="text-white text-base font-medium leading-normal">INDC Balance</p>
-                <p class="text-white tracking-light text-2xl font-bold leading-tight" id="indcBalance">0</p>
-              </div>
-            </div>
-            <div class="flex justify-stretch">
-              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
+                    <div class="me-2">
+                        <svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g clip-path="url(#clip0_6_535)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                    fill="currentColor"
+                                ></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_535">
+                                    <rect
+                                        width="48"
+                                        height="48"
+                                        fill="white"
+                                    ></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="fw-bold fs-4 text-gradient">IndiCoin</span>
+                </a>
+
                 <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#2496f3] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-                  id="sendIndcButton"
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                 >
-                  <span class="truncate">Send INDC</span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#223749] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-                  id="redeemIndcButton"
-                >
-                  <span class="truncate">Redeem INDC</span>
-                </button>
-              </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html">
+                                <i class="bi bi-speedometer2 me-1"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="send.html">
+                                <i class="bi bi-send me-1"></i>Send
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="deposit.html">
+                                <i class="bi bi-plus-circle me-1"></i>Deposit
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="redeem.html">
+                                <i class="bi bi-arrow-down-circle me-1"></i
+                                >Redeem
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle d-flex align-items-center"
+                                href="#"
+                                id="userDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <div
+                                    class="bg-primary rounded-circle me-2 d-flex align-items-center justify-content-center"
+                                    style="width: 32px; height: 32px"
+                                >
+                                    <i class="bi bi-person text-white"></i>
+                                </div>
+                                <span id="usernameDisplay">User</span>
+                            </a>
+                            <ul
+                                class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="userDropdown"
+                            >
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="bi bi-person me-2"></i>Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="bi bi-gear me-2"></i>Settings
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="#"
+                                        onclick="logout()"
+                                    >
+                                        <i
+                                            class="bi bi-box-arrow-right me-2"
+                                        ></i
+                                        >Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Transaction History</h2>
-            <div class="px-4 py-3 @container">
-              <div class="flex overflow-hidden rounded-lg border border-[#314f68] bg-[#101a23]">
-                <table class="flex-1">
-                  <thead>
-                    <tr class="bg-[#182834]">
-                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Date</th>
-                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Type</th>
-                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Amount</th>
-                      <th class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">
-                        Transaction ID
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="border-t border-t-[#314f68]">
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        2024-07-26
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">Deposit</td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        +5,000 INDC
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xabc123</td>
-                    </tr>
-                    <tr class="border-t border-t-[#314f68]">
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        2024-07-25
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">Mint</td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        +2,500 INDC
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xdef456</td>
-                    </tr>
-                    <tr class="border-t border-t-[#314f68]">
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        2024-07-24
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        Redemption
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        -1,000 INDC
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xghi789</td>
-                    </tr>
-                    <tr class="border-t border-t-[#314f68]">
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        2024-07-23
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        Withdrawal
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        -2,000 INDC
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xjkl012</td>
-                    </tr>
-                    <tr class="border-t border-t-[#314f68]">
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        2024-07-22
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">Deposit</td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">
-                        +3,000 INDC
-                      </td>
-                      <td class="table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480 h-[72px] px-4 py-2 w-[400px] text-[#90b0cb] text-sm font-normal leading-normal">0xmnp345</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <style>
-                          @container(max-width:120px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-120{display: none;}}
-                @container(max-width:240px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-240{display: none;}}
-                @container(max-width:360px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-360{display: none;}}
-                @container(max-width:480px){.table-9f9cf736-cf5d-4674-bc1e-a9e556b83ee5-column-480{display: none;}}
-              </style>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="py-4">
+            <div class="container">
+                <!-- Header -->
+                <div class="row mb-4">
+                    <div class="col-lg-8">
+                        <h1 class="display-6 fw-bold mb-2">Dashboard</h1>
+                        <p class="text-secondary mb-0">
+                            Welcome back! Here's your IndiCoin overview.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="d-flex flex-column align-items-lg-end">
+                            <small class="text-secondary">Wallet Address</small>
+                            <span
+                                id="walletAddress"
+                                class="wallet-address fw-medium"
+                                style="cursor: pointer"
+                                title="Click to copy"
+                            >
+                                Not Connected
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <div class="stats-label">INDC Balance</div>
+                                    <div class="stats-value" id="indcBalance">
+                                        0
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 60px; height: 60px"
+                                >
+                                    <i
+                                        class="bi bi-currency-rupee text-primary fs-4"
+                                    ></i>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up me-1"></i>+2.5%
+                                </small>
+                                <small class="text-secondary ms-2"
+                                    >vs last month</small
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <div class="stats-label">Total Sent</div>
+                                    <div class="stats-value" id="totalSent">
+                                        0
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 60px; height: 60px"
+                                >
+                                    <i class="bi bi-send text-success fs-4"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up me-1"></i>+5.2%
+                                </small>
+                                <small class="text-secondary ms-2"
+                                    >vs last month</small
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <div class="stats-label">
+                                        Total Received
+                                    </div>
+                                    <div class="stats-value" id="totalReceived">
+                                        0
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 60px; height: 60px"
+                                >
+                                    <i
+                                        class="bi bi-arrow-down-circle text-warning fs-4"
+                                    ></i>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up me-1"></i>+12.8%
+                                </small>
+                                <small class="text-secondary ms-2"
+                                    >vs last month</small
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-lightning-charge me-2"></i
+                                    >Quick Actions
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-lg-3 col-md-6">
+                                        <button
+                                            class="btn btn-primary w-100 py-3"
+                                            id="sendIndcButton"
+                                        >
+                                            <i class="bi bi-send-fill me-2"></i>
+                                            Send INDC
+                                        </button>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <button
+                                            class="btn btn-success w-100 py-3"
+                                            onclick="window.location.href='deposit.html'"
+                                        >
+                                            <i
+                                                class="bi bi-plus-circle-fill me-2"
+                                            ></i>
+                                            Deposit INR
+                                        </button>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <button
+                                            class="btn btn-warning w-100 py-3"
+                                            id="redeemIndcButton"
+                                        >
+                                            <i
+                                                class="bi bi-arrow-down-circle-fill me-2"
+                                            ></i>
+                                            Redeem to INR
+                                        </button>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <button
+                                            class="btn btn-outline-secondary w-100 py-3"
+                                            onclick="generateStatement()"
+                                        >
+                                            <i
+                                                class="bi bi-file-earmark-text me-2"
+                                            ></i>
+                                            Statement
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts and Analytics -->
+                <div class="row mb-5">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div
+                                class="card-header d-flex justify-content-between align-items-center"
+                            >
+                                <h5 class="mb-0">
+                                    <i class="bi bi-graph-up me-2"></i
+                                    >Transaction History
+                                </h5>
+                                <div class="btn-group" role="group">
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="timeRange"
+                                        id="week"
+                                        autocomplete="off"
+                                        checked
+                                    />
+                                    <label
+                                        class="btn btn-outline-primary btn-sm"
+                                        for="week"
+                                        >7D</label
+                                    >
+
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="timeRange"
+                                        id="month"
+                                        autocomplete="off"
+                                    />
+                                    <label
+                                        class="btn btn-outline-primary btn-sm"
+                                        for="month"
+                                        >30D</label
+                                    >
+
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="timeRange"
+                                        id="year"
+                                        autocomplete="off"
+                                    />
+                                    <label
+                                        class="btn btn-outline-primary btn-sm"
+                                        for="year"
+                                        >1Y</label
+                                    >
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas
+                                    id="transactionChart"
+                                    height="300"
+                                ></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-pie-chart me-2"></i
+                                    >Transaction Types
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="pieChart" height="250"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div
+                                class="card-header d-flex justify-content-between align-items-center"
+                            >
+                                <h5 class="mb-0">
+                                    <i class="bi bi-clock-history me-2"></i
+                                    >Recent Transactions
+                                </h5>
+                                <button class="btn btn-outline-primary btn-sm">
+                                    View All
+                                </button>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Amount</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Transaction ID</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="transactionTableBody">
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="d-flex align-items-center"
+                                                    >
+                                                        <div
+                                                            class="bg-success bg-opacity-10 rounded-circle p-2 me-3"
+                                                        >
+                                                            <i
+                                                                class="bi bi-plus-circle text-success"
+                                                            ></i>
+                                                        </div>
+                                                        <span class="fw-medium"
+                                                            >Deposit</span
+                                                        >
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="text-success fw-bold"
+                                                        >+5,000 INDC</span
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span class="text-secondary"
+                                                        >Dec 15, 2024</span
+                                                    >
+                                                    <br />
+                                                    <small class="text-muted"
+                                                        >10:30 AM</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="status-badge status-success"
+                                                        >Completed</span
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="wallet-address"
+                                                        onclick="IndicoinApp.utils.copyToClipboard('0xabc123...')"
+                                                        style="cursor: pointer"
+                                                    >
+                                                        0xabc123...
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm btn-outline-primary"
+                                                    >
+                                                        <i
+                                                            class="bi bi-eye"
+                                                        ></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="d-flex align-items-center"
+                                                    >
+                                                        <div
+                                                            class="bg-primary bg-opacity-10 rounded-circle p-2 me-3"
+                                                        >
+                                                            <i
+                                                                class="bi bi-send text-primary"
+                                                            ></i>
+                                                        </div>
+                                                        <span class="fw-medium"
+                                                            >Send</span
+                                                        >
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="text-danger fw-bold"
+                                                        >-1,500 INDC</span
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span class="text-secondary"
+                                                        >Dec 14, 2024</span
+                                                    >
+                                                    <br />
+                                                    <small class="text-muted"
+                                                        >3:45 PM</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="status-badge status-success"
+                                                        >Completed</span
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="wallet-address"
+                                                        onclick="IndicoinApp.utils.copyToClipboard('0xdef456...')"
+                                                        style="cursor: pointer"
+                                                    >
+                                                        0xdef456...
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm btn-outline-primary"
+                                                    >
+                                                        <i
+                                                            class="bi bi-eye"
+                                                        ></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="d-flex align-items-center"
+                                                    >
+                                                        <div
+                                                            class="bg-warning bg-opacity-10 rounded-circle p-2 me-3"
+                                                        >
+                                                            <i
+                                                                class="bi bi-arrow-down-circle text-warning"
+                                                            ></i>
+                                                        </div>
+                                                        <span class="fw-medium"
+                                                            >Redeem</span
+                                                        >
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="text-warning fw-bold"
+                                                        >-2,000 INDC</span
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span class="text-secondary"
+                                                        >Dec 13, 2024</span
+                                                    >
+                                                    <br />
+                                                    <small class="text-muted"
+                                                        >11:20 AM</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="status-badge status-pending"
+                                                        >Processing</span
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="wallet-address"
+                                                        onclick="IndicoinApp.utils.copyToClipboard('0xghi789...')"
+                                                        style="cursor: pointer"
+                                                    >
+                                                        0xghi789...
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm btn-outline-primary"
+                                                    >
+                                                        <i
+                                                            class="bi bi-eye"
+                                                        ></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+        </main>
+
+        <!-- Scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/app.js"></script>
+
+        <script>
+            // Initialize charts
+            function initializeCharts() {
+                // Transaction History Chart
+                const ctx = document
+                    .getElementById("transactionChart")
+                    .getContext("2d");
+                const transactionChart = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: [
+                            "Dec 9",
+                            "Dec 10",
+                            "Dec 11",
+                            "Dec 12",
+                            "Dec 13",
+                            "Dec 14",
+                            "Dec 15",
+                        ],
+                        datasets: [
+                            {
+                                label: "Balance",
+                                data: [
+                                    8000, 8500, 8200, 9000, 7500, 8800, 10500,
+                                ],
+                                borderColor: "#3b82f6",
+                                backgroundColor: "rgba(59, 130, 246, 0.1)",
+                                tension: 0.4,
+                                fill: true,
+                            },
+                        ],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                grid: {
+                                    color: "rgba(255, 255, 255, 0.1)",
+                                },
+                                ticks: {
+                                    color: "#94a3b8",
+                                },
+                            },
+                            x: {
+                                grid: {
+                                    color: "rgba(255, 255, 255, 0.1)",
+                                },
+                                ticks: {
+                                    color: "#94a3b8",
+                                },
+                            },
+                        },
+                        plugins: {
+                            legend: {
+                                display: false,
+                            },
+                        },
+                    },
+                });
+
+                // Pie Chart
+                const pieCtx = document
+                    .getElementById("pieChart")
+                    .getContext("2d");
+                const pieChart = new Chart(pieCtx, {
+                    type: "doughnut",
+                    data: {
+                        labels: ["Deposits", "Sends", "Redeems"],
+                        datasets: [
+                            {
+                                data: [60, 25, 15],
+                                backgroundColor: [
+                                    "#10b981",
+                                    "#3b82f6",
+                                    "#f59e0b",
+                                ],
+                                borderWidth: 0,
+                            },
+                        ],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: "bottom",
+                                labels: {
+                                    color: "#94a3b8",
+                                    padding: 20,
+                                },
+                            },
+                        },
+                    },
+                });
+            }
+
+            // Logout function
+            function logout() {
+                localStorage.clear();
+                IndicoinApp.utils.showNotification(
+                    "Logged out successfully",
+                    "success",
+                );
+                setTimeout(() => {
+                    window.location.href = "homepage.html";
+                }, 1000);
+            }
+
+            // Generate statement
+            function generateStatement() {
+                IndicoinApp.utils.showNotification(
+                    "Generating statement...",
+                    "info",
+                );
+                setTimeout(() => {
+                    IndicoinApp.utils.showNotification(
+                        "Statement generated successfully!",
+                        "success",
+                    );
+                }, 2000);
+            }
+
+            // Update username display
+            function updateUsernameDisplay() {
+                const username = localStorage.getItem("username") || "User";
+                document.getElementById("usernameDisplay").textContent =
+                    username;
+            }
+
+            // Initialize dashboard
+            document.addEventListener("DOMContentLoaded", function () {
+                updateUsernameDisplay();
+                initializeCharts();
+
+                // Add animation delays to stats cards
+                document
+                    .querySelectorAll(".stats-card")
+                    .forEach((card, index) => {
+                        card.style.animationDelay = `${index * 0.1}s`;
+                        card.classList.add("fade-in");
+                    });
+            });
+        </script>
+    </body>
 </html>
